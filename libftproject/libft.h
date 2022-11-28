@@ -6,7 +6,7 @@
 /*   By: druina <druina@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 11:02:57 by druina            #+#    #+#             */
-/*   Updated: 2022/11/28 08:08:27 by druina           ###   ########.fr       */
+/*   Updated: 2022/11/28 16:11:11 by druina           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,4 +77,6 @@ void				ft_putchar(char c);
 int					ft_putstr(char *str);
 int					ft_putnbr(int nb);
 long				ft_nbrlen(long nb);
+int					ft_putnbr_unsigned(unsigned int nb);
+char				*ft_nbrtohex(unsigned int nb, char x);
 #endif
