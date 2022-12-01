@@ -6,19 +6,20 @@
 /*   By: druina <druina@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 15:39:00 by druina            #+#    #+#             */
-/*   Updated: 2022/11/28 16:04:41 by druina           ###   ########.fr       */
+/*   Updated: 2022/12/01 10:01:33 by druina           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
 int	print_p(void *ptr, int count)
 {
 	char	*str;
 
-	write(1, "0x", 3);
+	write(1, "0x", 2);
 	count = count + 2;
 	str = ft_nbrtohex((unsigned long long)ptr, 'x');
 	count = count + ft_putstr(str);
+	free(str);
 	return (count);
 }

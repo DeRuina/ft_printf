@@ -1,19 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_nbr.c                                        :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: druina <druina@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/25 14:18:00 by druina            #+#    #+#             */
-/*   Updated: 2022/12/01 09:25:03 by druina           ###   ########.fr       */
+/*   Created: 2022/12/01 11:40:11 by druina            #+#    #+#             */
+/*   Updated: 2022/12/01 11:40:20 by druina           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
-int	print_nbr(int nb, int count)
-{
-	count = count + ft_putnbr(nb);
-	return (count);
-}
+# include "./libft/libft.h"
+# include <stdarg.h>
+
+int	ft_printf(const char *str, ...);
+int	print_c(char c, int count);
+int	print_s(char *str, int count);
+int	print_nbr(int nb, int count);
+int	print_nbr_u(unsigned int nb, int count);
+int	print_x(unsigned int nb, char x, int count);
+int	print_p(void *ptr, int count);
+
+#endif

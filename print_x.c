@@ -6,11 +6,11 @@
 /*   By: druina <druina@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 10:37:43 by druina            #+#    #+#             */
-/*   Updated: 2022/11/28 15:35:15 by druina           ###   ########.fr       */
+/*   Updated: 2022/12/01 09:25:05 by druina           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 int	print_x(unsigned int nb, char x, int count)
 {
@@ -18,5 +18,6 @@ int	print_x(unsigned int nb, char x, int count)
 
 	str = ft_nbrtohex(nb, x);
 	count = count + ft_putstr(str);
+	free(str);
 	return (count);
 }

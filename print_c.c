@@ -6,15 +6,15 @@
 /*   By: druina <druina@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/25 12:16:07 by druina            #+#    #+#             */
-/*   Updated: 2022/11/25 14:32:54 by druina           ###   ########.fr       */
+/*   Updated: 2022/12/01 09:25:00 by druina           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 int	print_c(char c, int count)
 {
 	ft_putchar(c);
 	count++;
-	return(count);
+	return (count);
 }
