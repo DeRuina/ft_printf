@@ -6,7 +6,7 @@
 /*   By: druina <druina@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 13:42:11 by druina            #+#    #+#             */
-/*   Updated: 2022/12/01 11:40:43 by druina           ###   ########.fr       */
+/*   Updated: 2022/12/02 07:53:28 by druina           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,5 +54,6 @@ int	ft_printf(const char *str, ...)
 		count++;
 		str++;
 	}
+	va_end(args);
 	return (count);
 }
