@@ -33,7 +33,7 @@ $(NAME): $(SRC)
 	ar -rcs $(NAME) $(OBJECT)
 	@echo "\033[31mYOU'RE MY DADDY! YOU JUST MADE ME!"
 	@echo "$$MONKEY"
-	@echo "I LOOK LIKE YOU !LET'S PLAY, RUN ME!"
+	@echo "I LOOK LIKE YOU! LET'S PLAY, RUN ME!"
 
 
 clean:
