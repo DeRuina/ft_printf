@@ -6,7 +6,7 @@
 #    By: druina <druina@student.hive.fi>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/24 13:40:59 by druina            #+#    #+#              #
-#    Updated: 2022/12/02 10:22:26 by druina           ###   ########.fr        #
+#    Updated: 2022/12/05 09:22:58 by druina           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,7 @@ OBJECT = $(SRC:.c=.o)
 FLAGS = -Wall -Wextra -Werror
 
 HEADER = ft_printf.h
+
 
 .PHONY: all clean fclean re
 
