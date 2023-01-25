@@ -6,7 +6,7 @@
 #    By: druina <druina@student.hive.fi>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/24 13:40:59 by druina            #+#    #+#              #
-#    Updated: 2022/12/05 09:22:58 by druina           ###   ########.fr        #
+#    Updated: 2023/01/25 23:47:00 by druina           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,20 +15,22 @@ NAME = libftprintf.a
 
 SRC = ft_printf.c print_c.c print_nbr_u.c print_nbr.c print_p.c print_s.c print_x.c
 
+SRCPATH = $(addprefix ./src/, $(SRC))
+
 OBJECT = $(SRC:.c=.o)
 
 FLAGS = -Wall -Wextra -Werror
 
-HEADER = ft_printf.h
+HEADER = ./src/ft_printf.h
 
 
 .PHONY: all clean fclean re
 
 all: $(NAME)
 
-$(NAME): $(SRC)
+$(NAME): $(SRCPATH) 
 	cd libft && make
-	cc $(FLAGS) -c $(SRC) -I $(HEADER)
+	cc $(FLAGS) -c $(SRCPATH) -I $(HEADER)
 	cd libft && mv libft.a ..
 	mv libft.a $(NAME)
 	ar -rcs $(NAME) $(OBJECT)

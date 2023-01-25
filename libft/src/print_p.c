@@ -1,29 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_nbrlen.c                                        :+:      :+:    :+:   */
+/*   print_p.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: druina <druina@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/28 08:02:36 by druina            #+#    #+#             */
-/*   Updated: 2022/11/28 08:10:38 by druina           ###   ########.fr       */
+/*   Created: 2022/11/28 15:39:00 by druina            #+#    #+#             */
+/*   Updated: 2022/12/23 14:45:21 by druina           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-long	ft_nbrlen(long nb)
-{
-	int	count;
+#include "libft.h"
 
-	count = 0;
-	if (nb < 0 || nb == 0)
-	{
-		nb = nb * -1;
-		count++;
-	}
-	while (nb > 0)
-	{
-		nb = (nb - nb % 10) / 10;
-		count++;
-	}
+int	print_p(void *ptr, int count)
+{
+	char	*str;
+
+	write(1, "0x", 2);
+	count = count + 2;
+	str = ft_nbrtohex((unsigned long long)ptr, 'x');
+	count = count + ft_putstr(str);
+	free(str);
 	return (count);
 }
